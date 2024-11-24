@@ -316,4 +316,19 @@ Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
 Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  93.3
 
-** Total Elapsed Runtime: 0:0:43
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :  40
+N Dog Images        :  30
+N Not-Dog Images    :  10
+ 
+pct_match           : 87.500000
+pct_correct_dogs    : 100.000000
+pct_correct_breed   : 93.333333
+pct_correct_notdogs : 100.000000
+
+INCORRECT Dog Breed Assignment:
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+Real:             great pyrenees   Classifier:                         kuvasz
+
+** Total Elapsed Runtime: 0:0:36
