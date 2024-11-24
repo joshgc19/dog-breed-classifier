@@ -72,7 +72,7 @@ def print_results(results_dic, results_stats_dic, model,
     # Prints summary statistics (percentages) on Model Run
     print(" ")
     for key in results_stats_dic:
-        if key.starts_with("p"):
+        if key.startswith("p"):
             print("{:20}: {:3d}".format(key, results_stats_dic[key]))
 
     # IF print_incorrect_dogs == True AND there were images incorrectly
