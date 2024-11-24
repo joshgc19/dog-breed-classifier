@@ -40,6 +40,30 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
-    # Replace None with the results_dic dictionary that you created with this
-    # function
-    return None
+    in_files = listdir(image_dir)
+
+    # Processes each of the files to create a dictionary where the key
+    # is the filename and the value is the picture label (below).
+
+    # Creates empty dictionary for the results (pet labels, etc.)
+    results_dic = dict()
+
+    # Processes through each file in the directory, extracting only the words
+    # of the file that contain the pet image label
+    for idx in range(0, len(in_files), 1):
+
+        # Skips file if starts with . (like .DS_Store of Mac OSX) because it
+        # isn't an pet image file
+        if in_files[idx][0] != ".":
+
+            # Creates temporary label variable to hold pet label name extracted
+            pet_label = " ".join(in_files[idx].split("_")[:-1]).lower()
+
+            if in_files[idx] not in results_dic:
+                results_dic[in_files[idx]] = [pet_label]
+
+            else:
+                print("** Warning: Duplicate files exist in directory:",
+                      in_files[idx])
+
+    return results_dic
